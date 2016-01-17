@@ -12,12 +12,12 @@ module TimecopConsole
         second = Time.now.sec
       else
         # backward compatible format
-        year   = params[:year]
-        month  = params[:month]
-        day    = params[:day]
-        hour   = params[:hour]
-        minute = params[:min]
-        second = params[:sec]
+        year   = params[:year].to_i
+        month  = params[:month].to_i
+        day    = params[:day].to_i
+        hour   = params[:hour].to_i
+        minute = params[:min].to_i
+        second = params[:sec].to_i
       end
 
       session[SESSION_KEY_NAME] = Time.zone.local(year, month, day, hour, minute, second)
