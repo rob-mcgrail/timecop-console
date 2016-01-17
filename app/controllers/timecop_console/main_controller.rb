@@ -4,11 +4,11 @@ module TimecopConsole
 
     def update
       if date_select_format?
-        year   = params['timecop']['current_time(1i)']
-        month  = params['timecop']['current_time(2i)']
-        day    = params['timecop']['current_time(3i)']
-        hour   = params['timecop']['current_time(4i)']
-        minute = params['timecop']['current_time(5i)']
+        year   = params['timecop']['current_time(1i)'].to_i
+        month  = params['timecop']['current_time(2i)'].to_i
+        day    = params['timecop']['current_time(3i)'].to_i
+        hour   = params['timecop']['current_time(4i)'].to_i
+        minute = params['timecop']['current_time(5i)'].to_i
         second = Time.now.sec
       else
         # backward compatible format
